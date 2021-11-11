@@ -1,0 +1,187 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://prefab/main.gd" type="Script" id=1]
+[ext_resource path="res://sonic_comic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sprite/star.png" type="Texture" id=3]
+[ext_resource path="res://img/meguminv.png" type="Texture" id=4]
+[ext_resource path="res://img/sataniav.png" type="Texture" id=5]
+[ext_resource path="res://img/kannav.png" type="Texture" id=6]
+[ext_resource path="res://img/yui.png" type="Texture" id=7]
+[ext_resource path="res://img/hikage.png" type="Texture" id=8]
+[ext_resource path="res://img/kanna.png" type="Texture" id=9]
+[ext_resource path="res://img/satania.png" type="Texture" id=10]
+[ext_resource path="res://img/yuiv.png" type="Texture" id=11]
+[ext_resource path="res://img/hikagev.png" type="Texture" id=12]
+[ext_resource path="res://img/nezuko.png" type="Texture" id=13]
+[ext_resource path="res://img/umaru.png" type="Texture" id=14]
+[ext_resource path="res://img/ika.png" type="Texture" id=15]
+[ext_resource path="res://img/ikav.png" type="Texture" id=16]
+[ext_resource path="res://img/umaruv.png" type="Texture" id=17]
+[ext_resource path="res://img/nezukov.png" type="Texture" id=18]
+[ext_resource path="res://img/megumin.png" type="Texture" id=19]
+[ext_resource path="res://Hikage (2).png" type="Texture" id=20]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 2 )
+
+[node name="main" type="Node2D"]
+script = ExtResource( 1 )
+rank_1 = 2000
+rank_2 = 5000
+rank_3 = 7500
+min_score = 2250
+umaru = 12
+ika = 9
+nezuko = 6
+megumin = 12
+yui = 20
+satania = 9
+kanna = 3
+hikage = 3
+
+[node name="Hikage (2)" type="Sprite" parent="."]
+position = Vector2( 512, 373 )
+scale = Vector2( 0.474074, 0.731482 )
+texture = ExtResource( 20 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 64.0
+margin_top = 128.0
+margin_right = 768.0
+margin_bottom = 704.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Label" type="Label" parent="."]
+margin_right = 206.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "Score: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lblscore" type="Label" parent="."]
+margin_left = 192.0
+margin_right = 284.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "0000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lblminscore" type="Label" parent="."]
+margin_left = 320.0
+margin_right = 412.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "0000"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="star1" type="Sprite" parent="."]
+position = Vector2( 768, 0 )
+texture = ExtResource( 3 )
+offset = Vector2( 32, 32 )
+
+[node name="star2" type="Sprite" parent="."]
+position = Vector2( 832, 0 )
+texture = ExtResource( 3 )
+offset = Vector2( 32, 32 )
+
+[node name="star3" type="Sprite" parent="."]
+position = Vector2( 896, 0 )
+texture = ExtResource( 3 )
+offset = Vector2( 32, 32 )
+
+[node name="panel" type="VBoxContainer" parent="."]
+margin_left = 832.0
+margin_top = 128.0
+margin_right = 1024.0
+margin_bottom = 768.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="umaru" type="CheckBox" parent="panel"]
+margin_right = 192.0
+margin_bottom = 72.0
+custom_icons/checked = ExtResource( 17 )
+custom_icons/unchecked = ExtResource( 14 )
+
+[node name="ika" type="CheckBox" parent="panel"]
+margin_top = 76.0
+margin_right = 192.0
+margin_bottom = 148.0
+custom_icons/checked = ExtResource( 16 )
+custom_icons/unchecked = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nezuko" type="CheckBox" parent="panel"]
+margin_top = 152.0
+margin_right = 192.0
+margin_bottom = 224.0
+custom_icons/checked = ExtResource( 18 )
+custom_icons/unchecked = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="megumin" type="CheckBox" parent="panel"]
+margin_top = 228.0
+margin_right = 192.0
+margin_bottom = 300.0
+custom_icons/checked = ExtResource( 4 )
+custom_icons/unchecked = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="yui" type="CheckBox" parent="panel"]
+margin_top = 304.0
+margin_right = 192.0
+margin_bottom = 376.0
+custom_icons/checked = ExtResource( 11 )
+custom_icons/unchecked = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="satania" type="CheckBox" parent="panel"]
+margin_top = 380.0
+margin_right = 192.0
+margin_bottom = 452.0
+custom_icons/checked = ExtResource( 5 )
+custom_icons/unchecked = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="kanna" type="CheckBox" parent="panel"]
+margin_top = 456.0
+margin_right = 192.0
+margin_bottom = 528.0
+custom_icons/checked = ExtResource( 6 )
+custom_icons/unchecked = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hikage" type="CheckBox" parent="panel"]
+margin_top = 532.0
+margin_right = 192.0
+margin_bottom = 604.0
+custom_icons/checked = ExtResource( 12 )
+custom_icons/unchecked = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
